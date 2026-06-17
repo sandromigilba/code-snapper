@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { LandingPage } from './pages/LandingPage'
 import { Dashboard } from './pages/Dashboard'
 import { EditorPage } from './pages/EditorPage'
@@ -9,7 +9,7 @@ import { WorkspaceLayout } from './components/workspace/WorkspaceLayout'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Landing Page */}
         <Route path="/" element={<LandingPage />} />
@@ -59,7 +59,7 @@ function App() {
         {/* Fallback routing */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
