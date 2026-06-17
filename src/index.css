@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  --color-app-bg: var(--app-bg);
+  --color-app-surface: var(--app-surface);
+  --color-app-primary: var(--app-primary);
+  --color-app-accent: var(--app-accent);
+  --color-app-text: var(--app-text);
+  --color-app-border: var(--app-border);
+}
+
+:root {
+  /* Light Theme */
+  --app-bg: #f1f5f9;
+  --app-surface: #ffffff;
+  --app-primary: #7c3aed;
+  --app-accent: #7c3aed;
+  --app-text: #111827;
+  --app-border: #e2e8f0;
+}
+
+[data-theme='purple-dracula'] {
+  /* Purple Dracula Theme */
+  --app-bg: #14111d;
+  --app-surface: #1d1729;
+  --app-primary: #a855f7;
+  --app-accent: #c084fc;
+  --app-text: #f5f3ff;
+  --app-border: #2e243f;
+}
+
+/* Base custom resets */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom rounded corner class to enforce border-radius: 30px */
+.rounded-30 {
+  border-radius: 30px !important;
+}
+
+/* Custom focus ring styling for WCAG AA compliance */
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--app-primary);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar for modern look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 9999px;
+}
+
+[data-theme='purple-dracula'] ::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.3);
+}
+
+[data-theme='purple-dracula'] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.35);
+}

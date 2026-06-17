@@ -1,0 +1,17 @@
+{
+  "short_name": "CodeSnapper",
+  "name": "Code Snapper",
+  "description": "Generate beautiful code screenshots in seconds.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/dashboard",
+  "background_color": "#14111d",
+  "theme_color": "#14111d",
+  "display": "standalone",
+  "orientation": "any"
+}

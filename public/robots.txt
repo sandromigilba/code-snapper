@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://custom-code-snapper.pages.dev/sitemap.xml
